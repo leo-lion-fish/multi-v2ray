@@ -96,9 +96,9 @@ def get_ip():
     """
     my_ip = ""
     try:
-        my_ip = urllib.request.urlopen('http://api.ipify.org').read()
-    except Exception:
         my_ip = urllib.request.urlopen('http://icanhazip.com').read()
+    except Exception:
+        my_ip = urllib.request.urlopen('http://api.ipify.org').read()
     return bytes.decode(my_ip).strip()
 
 def port_is_use(port):
